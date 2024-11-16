@@ -1,12 +1,79 @@
-# Starter Next/Hardhat Project
+# Token Wallet
 
-After cloning the github, you will want to do the following to get the code running on your computer.
+A decentralized application that integrates a Solidity smart contract with a React-based frontend, allowing users to manage tokens seamlessly.
 
-1. Inside the project directory, in the terminal type: npm i
-2. Open two additional terminals in your VS code
-3. In the second terminal type: npx hardhat node
-4. In the third terminal, type: npx hardhat run --network localhost scripts/deploy.js
-5. Back in the first terminal, type npm run dev to launch the front-end.
+## Description
 
-After this, the project will be running on your localhost. 
-Typically at http://localhost:3000/
+The Token Wallet project features a smart contract written in Solidity, enabling functionalities like minting, transferring, and resetting token balances. The React frontend, built with ethers.js, allows users to interact with the smart contract via MetaMask, providing a user-friendly interface for managing token balances.
+
+## Getting Started
+
+### Prerequisites
+
+To run this project, you need:
+
+- [Node.js](https://nodejs.org/) installed
+- MetaMask extension set up in your browser
+
+### Installation and Setup
+
+1. Clone the repository and navigate to the project directory:
+
+   ```bash
+   git clone <repository-url>
+   cd <project-directory>
+   ```
+
+2. Install the required dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Compile and deploy the smart contract using an Ethereum development framework like Hardhat:
+
+   ```bash
+   npx hardhat compile
+   npx hardhat run --network localhost scripts/deploy.js
+   ```
+
+4. Update the frontend with the deployed contract's address. Locate the `contractAddress` variable in the frontend code and replace its value with the actual address of the deployed contract.
+
+### Running the Application
+Do these in two more separate terminals.
+
+1. Start a local Ethereum blockchain (e.g., using Hardhat):
+
+   ```bash
+   npx hardhat node
+   ```
+
+2. Connect MetaMask to your local blockchain network.
+
+3. Launch the React frontend:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and go to `http://localhost:3000` to use the Token Wallet.
+
+## Features
+
+- **Mint Tokens**: Allows the contract owner to create new tokens and add them to their wallet balance.
+- **Transfer Tokens**: Enables users to send tokens to other addresses if they have sufficient balance.
+- **Check Balances**: Displays token balances for the logged-in user and other recipients.
+- **Reset Balances**: Lets the owner reset all token balances to zero.
+
+## Troubleshooting
+
+If you experience any issues, try the following:
+
+- Ensure MetaMask is connected to the correct Ethereum network.
+- Confirm that the contract is properly deployed and that the contract address in the frontend matches the deployed contract's address.
+- Check the browser's developer console for errors or warnings during interaction.
+- Reinstall dependencies using `npm install` if issues persist.
+
+## License
+
+This project is licensed under the MIT License.
