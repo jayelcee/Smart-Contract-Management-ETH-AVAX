@@ -30,17 +30,7 @@ To run this project, you need:
    npm install
    ```
 
-3. Compile and deploy the smart contract using an Ethereum development framework like Hardhat:
-
-   ```bash
-   npx hardhat compile
-   npx hardhat run --network localhost scripts/deploy.js
-   ```
-
-4. Update the frontend with the deployed contract's address. Locate the `contractAddress` variable in the frontend code and replace its value with the actual address of the deployed contract.
-
 ### Running the Application
-Do these in two more separate terminals.
 
 1. Start a local Ethereum blockchain (e.g., using Hardhat):
 
@@ -48,15 +38,24 @@ Do these in two more separate terminals.
    npx hardhat node
    ```
 
-2. Connect MetaMask to your local blockchain network.
+2. Compile and deploy the smart contract using an Ethereum development framework like Hardhat:
 
-3. Launch the React frontend:
+   ```bash
+   npx hardhat compile
+   npx hardhat run --network localhost scripts/deploy.js
+   ```
+
+3. Update the frontend with the deployed contract's address. Locate the `contractAddress` variable in the frontend code and replace its value with the actual address of the deployed contract.
+
+4. Launch the React frontend:
 
    ```bash
    npm run dev
    ```
 
-4. Open your browser and go to `http://localhost:3000` to use the Token Wallet.
+5. Open your browser and go to `http://localhost:3000` to use the Token Wallet.
+
+6. Connect MetaMask to your local blockchain network.
 
 ## Features
 
@@ -73,6 +72,7 @@ If you experience any issues, try the following:
 - Confirm that the contract is properly deployed and that the contract address in the frontend matches the deployed contract's address.
 - Check the browser's developer console for errors or warnings during interaction.
 - Reinstall dependencies using `npm install` if issues persist.
+- Clear activity tab data in MetaMask
 
 ## License
 
