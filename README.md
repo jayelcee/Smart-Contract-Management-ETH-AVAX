@@ -6,6 +6,8 @@ A decentralized application that integrates a Solidity smart contract with a Rea
 
 The Token Wallet project features a smart contract written in Solidity, enabling functionalities like minting, transferring, and resetting token balances. The React frontend, built with ethers.js, allows users to interact with the smart contract via MetaMask, providing a user-friendly interface for managing token balances.
 
+Video Demo: https://www.loom.com/share/92bc56a19631425da6236d5c19fa2d24
+
 ## Getting Started
 
 ### Prerequisites
